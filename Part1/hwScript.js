@@ -19,7 +19,6 @@ const deleteOldList = () => {
 // Action listener, I send the action listener to a function.
 const populateList = async amount => {
   let content = document.getElementById("jsContent");
-  let orderedList = document.createElement("ol");
 
   let tableNode = await fetch(`https://randomuser.me/api?results=${amount}`)
     .then(response => response.json())
@@ -39,25 +38,26 @@ const populateList = async amount => {
 
       // Add the data
       data.results.forEach(element => {
-        const tableRow = document.createElement('tr');
+        const tableRow = document.createElement("tr");
 
-        const tdName = document.createElement('td');
+        const tdName = document.createElement("td");
         tdName.appendChild(
-          document.createTextNode(`${element.name.first} ${element.name.last}`));
+          document.createTextNode(`${element.name.first} ${element.name.last}`)
+        );
         tableRow.appendChild(tdName);
 
-        const tdCellPhone = document.createElement('td');
+        const tdCellPhone = document.createElement("td");
         tdCellPhone.appendChild(document.createTextNode(element.phone));
         tableRow.appendChild(tdCellPhone);
 
-        const tdBirth = document.createElement('td');
-        const dateString = element.dob.date.split('T')[0];
+        const tdBirth = document.createElement("td");
+        const dateString = element.dob.date.split("T")[0];
         tdBirth.appendChild(document.createTextNode(dateString));
         tableRow.appendChild(tdBirth);
 
-        const tdImage = document.createElement('td');
-        const imgImage = document.createElement('img');
-        imgImage.setAttribute('src', element.picture.thumbnail);
+        const tdImage = document.createElement("td");
+        const imgImage = document.createElement("img");
+        imgImage.setAttribute("src", element.picture.thumbnail);
         tdImage.appendChild(imgImage);
         tableRow.appendChild(tdImage);
 
