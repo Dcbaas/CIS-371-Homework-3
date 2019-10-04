@@ -12,23 +12,68 @@ body {
 }
 
 #container div {
-    background-color: #dfaf37;
-    margin: 5px;
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #title {
+  background-color: #f44336;
   grid-column-start: 1;
   grid-column-end: 6;
+  border: solid 2px black;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-size: 1.5em;
 }
 
 #content {
   grid-row: 2/2;
   grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #control {
+  background-color: #ff7961;
+  border: solid 2px black;
+  border-radius: 2px;
   grid-row: 2/2;
   grid-column: 5 / 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
 }
+
+table, td, th{
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+
+table tr:nth-child(even){
+  background-color: #ba000d;
+  color: white;
+}
+
+table tr:nth-child(odd){
+  background-color: #ff7961;
+}
+
+@media(max-width: 600px) {
+  #control {
+    display: none;
+  }
+  tr th:nth-child(even), tr td:nth-child(even) {
+    display: none;
+  }
+
+  tr th:nth-child(3), tr td:nth-child(3) {
+    display: none;
+  }
+}
+
+
+
