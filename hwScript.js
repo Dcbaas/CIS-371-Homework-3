@@ -18,7 +18,7 @@ const deleteOldList = () => {
 // Populates the list with text. Rather than putting all of the functionality in
 // Action listener, I send the action listener to a function. 
 const populateList = amount => {
-  let content = document.getElementById('content');
+  let content = document.getElementById('jsContent');
   let orderedList = document.createElement("ol");
   for (let i = 0; i < amount; i++) {
     let listItem = document.createElement('li');
