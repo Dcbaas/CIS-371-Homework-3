@@ -13,7 +13,24 @@
         <h1>David Baas</h1>
       </div>
       <div id="content">
-        OSRS Item Data Finder
+        <p>
+          This site calls the OpenDota Api. Dota 2 is a MOBA game similar to
+          Leauge of Legends if you are familier with that game. The data set
+          found is a random set of pubic matches that have been played on Dota 2
+          and had stats recorded for them. The data we see is the match Id of
+          the match played, The winner of the match (Radient or Dire) And the
+          average match making rank of all the players in the match. Sometimes
+          MMR is null because the players in game have not calibrated thier MMR
+          yet. A difference from part 1 of this assignment and this section is
+          that row color is determined by the winner of the match. Green is for
+          Radiant and Red is for Dire.
+        </p>
+        <p>
+          When grading, try not to make many calls to the api quickly. This api
+          is limited to 60 calls per minute. And also is limited to 50000 Per
+          month. You can find the api here at
+          <a href="https://docs.opendota.com/#">This link</a>.
+        </p>
         <div id="jsContent"></div>
       </div>
       <div id="control">
